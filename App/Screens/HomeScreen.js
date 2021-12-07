@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, StyleSheet, ImageBackground, Text, View, Image } from "react-native";
 
-export default function Home({ navigation }) {
+export default function HomeScreen({ navigation }) {
   return (
     <ImageBackground 
     style={styles.background}
@@ -12,6 +12,10 @@ export default function Home({ navigation }) {
         <Button
         title="Go to profile"
         onPress={() => navigation.navigate("UserProfile")}
+      />
+        <Button
+        title="Go to Register Page"
+        onPress={() => navigation.navigate("Register")}
       />
         </View>
         <View style={styles.loginButton}><Text>Login</Text></View>
