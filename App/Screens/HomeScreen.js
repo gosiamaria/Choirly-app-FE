@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
           onPress={() => navigation.navigate("UserProfile")}
         />
         <Button
-          title="Go to Register Page"
+          title="Go to r Page"
           onPress={() => navigation.navigate("RegisterScreen")}
         />
       </View>

@@ -9,6 +9,9 @@ import JoiningScreen from "../Screens/JoiningScreen";
 import NotificationsScreen from "../Screens/NotificationsScreen";
 import RegisterScreen from "../Screens/RegisterScreen";
 import SingleMessageScreen from "../Screens/SingleMessageScreen";
+import HomeScreen from "../Screens/HomeScreen";
+import LoginScreen from "../Screens/LoginScreen";
+import UserProfileScreen from "../Screens/UserProfileScreen.js";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,11 +21,14 @@ const MainStackNavigator = () => {
       initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="UserProfile" component={UserProfileScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="AllMembers" component={AllMembersScreen} />
       <Stack.Screen name="Choir" component={ChoirScreen} />
       <Stack.Screen name="CreateChoir" component={CreateChoirScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-      <Stack.Screen name="Event" component={EventScreen} />
+      <Stack.Screen name="EventScreen" component={EventScreen} />
       <Stack.Screen name="Joining" component={JoiningScreen} />
       <Stack.Screen name="Notifications" component={NotificationsScreen} />
       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
