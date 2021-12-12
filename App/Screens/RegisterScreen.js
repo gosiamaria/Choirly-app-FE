@@ -21,11 +21,13 @@ export default function RegisterScreen() {
       }); // all this is from useForm which is imported from react-hook-form
     
     const onSubmit = (data) => {
-        const username = data.username;
-        const first_name = data.first_name;
-        const last_name = data.last_name;
-        const phone_number = parseInt(data.phone_number);
-        postUser(email, username, first_name, last_name, phone_number).then((user) => {
+        const body = {
+            username = data.username,
+            first_name = data.first_name,
+            last_name = data.last_name,
+            phone_number = parseInt(data.phone_number),
+        }
+        postUser(body).then((user) => {
             setConfirmation('Your profile has been created')
         })
     }
