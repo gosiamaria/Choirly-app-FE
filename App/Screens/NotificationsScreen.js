@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import Notification from "../components/Notification";
 import { getNotificationByUsername } from "../utils/api";
 
+import { auth } from "../../firebase";
+
 export default function NotificationsScreen() {
   const [notifications, setNotifications] = useState([]);
 
@@ -11,6 +13,8 @@ export default function NotificationsScreen() {
       setNotifications(notifications);
     });
   }, []);
+
+  console.log(auth.currentUser.displayName);
 
   return (
     <View>
